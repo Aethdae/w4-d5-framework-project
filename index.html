@@ -3,51 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox and Forms!</title>
+    <title>Gridtesting!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Header!</h1>
-      <nav>
-        <ul id="navBar">
-          <p>Navbar links for screenreader/accessibility</p>
-          <li><a href="index.html">flex links</a></li>
-          <li><a href="index.html">a = inline</a></li>
-          <li><a href="index.html">padding to avoid the right side</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div id="gridLayout">
+      <header>
+        <h1>Header!</h1>
+        <nav>
+          <ul id="navBar">
+            <p>Navbar links for screenreader/accessibility</p>
+            <li><a href="index.html">flex links</a></li>
+            <li><a href="index.html">a = inline</a></li>
+            <li><a href="index.html">padding to avoid the right side</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <main>
-      <section id="heroSection">
-        <div class="flexContainer" id="smallerDiv">
-          <h2>I am smaller and taller!</h2>
-          <p>My ID adds extra styling onto the class.</p>
-          <p>Used for smaller menus, etc.</p>
-          <p>The extra size goes away when smaller screen.</p>
-        </div>
+      <div id="blankDiv"></div>
+      <main>
+        <section id="heroSection">
+          <div class="flexContainer" id="smallerDiv">
+            <h2>I am smaller and taller!</h2>
+            <p>My ID adds extra styling onto the class.</p>
+            <p>Used for smaller menus, etc.</p>
+            <p>The extra size goes away when smaller screen.</p>
+          </div>
 
-        <div class="flexContainer">
-          <h2 id="colorH2">
-            These sections are containers in a flexbox, colored:
-          </h2>
-          <p>They move around the screen as you resize it, respecting CSS.</p>
-          <p>
-            This one is set to maxWidth 600, so more than the one on the left,
-            if there is room.
+          <div class="flexContainer">
+            <h2 id="colorH2">
+              These sections are containers in a flexbox, colored:
+            </h2>
+            <p>They move around the screen as you resize it, respecting CSS.</p>
+            <p>
+              This one is set to maxWidth 600, so more than the one on the left,
+              if there is room.
+            </p>
+            <p>
+              All three of these boxes move to column instead of row when the
+              screen is smaller.
+            </p>
+            <p>Using fit-content + padding to allow for very tight blocks.</p>
+          </div>
+
+          <div class="flexContainer">
+            <h2>Form Section</h2>
+            <form action="" id="form">
+              <div class="inputWrapper">
+                <label>
+                  Email
+                  <input
+                    required
+                    placeholder="Email"
+                    type="email"
+                    name="email"
+                    id="emailInput"
+                  />
+                </label>
+
+                <label>
+                  Password
+                  <input
+                    required
+                    placeholder="Password"
+                    type="password"
+                    name="password"
+                    id="nameInput"
+                  />
+                </label>
+
+                <label>
+                  Send a message!
+                  <textarea
+                    name="optional"
+                    id="optional"
+                    placeholder="Enter an optional message"
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="buttonWrapper">
+                <button id="submitButton">Submit</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section id="inline-v-block">
+          <p class="block">
+            Hey, I am an block p element. Some of the text will be black like
+            normal, but
+            <span id="blueSpan">this section is blue</span> due to an inline
+            span. I go 100% of parent unless overridden.
           </p>
-          <p>
-            All three of these boxes move to column instead of row when the
-            screen is smaller.
-          </p>
-          <p>Using fit-content + padding to allow for very tight blocks.</p>
-        </div>
+          <div class="block">also block but as a div</div>
+          <div class="block">
+            this is a block as well, but with
+            <a href="http://google.com">a link to google.</a>
+          </div>
+        </section>
 
-        <div class="flexContainer">
-          <h2>Form Section</h2>
-          <form action="" id="form">
-            <div class="inputWrapper">
+        <section id="formResizeSection">
+          <form action="" id="resizableForm">
+            <div class="resizableInputWrapper">
               <label>
                 Email
                 <input
@@ -69,7 +127,9 @@
                   id="nameInput"
                 />
               </label>
+            </div>
 
+            <div class="resizableButtonWrapper">
               <label>
                 Send a message!
                 <textarea
@@ -78,69 +138,15 @@
                   placeholder="Enter an optional message"
                 ></textarea>
               </label>
-            </div>
-
-            <div class="buttonWrapper">
               <button id="submitButton">Submit</button>
             </div>
           </form>
-        </div>
-      </section>
-
-      <section id="inline-v-block">
-        <p class="block">
-          Hey, I am an block p element. Some of the text will be black like
-          normal, but
-          <span id="blueSpan">this section is blue</span> due to an inline span.
-          I go 100% of parent unless overridden.
-        </p>
-        <div class="block">also block but as a div</div>
-        <div class="block">
-          this is a block as well, but with
-          <a href="http://google.com">a link to google.</a>
-        </div>
-      </section>
-
-      <section id="formResizeSection">
-        <form action="" id="resizableForm">
-          <div class="resizableInputWrapper">
-            <label>
-              Email
-              <input
-                required
-                placeholder="Email"
-                type="email"
-                name="email"
-                id="emailInput"
-              />
-            </label>
-
-            <label>
-              Password
-              <input
-                required
-                placeholder="Password"
-                type="password"
-                name="password"
-                id="nameInput"
-              />
-            </label>
-          </div>
-
-          <div class="resizableButtonWrapper">
-            <label>
-              Send a message!
-              <textarea
-                name="optional"
-                id="optional"
-                placeholder="Enter an optional message"
-              ></textarea>
-            </label>
-            <button id="submitButton">Submit</button>
-          </div>
-        </form>
-      </section>
-    </main>
-    <footer></footer>
+        </section>
+      </main>
+      <footer>
+        <p>Paragraph in the footer.</p>
+        <a href="https://www.google.com">google</a>
+      </footer>
+    </div>
   </body>
 </html>
