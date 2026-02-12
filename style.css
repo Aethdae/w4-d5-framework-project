@@ -1,0 +1,160 @@
+:root {
+  --big-color: lightblue;
+  --small-color: aqua;
+}
+
+* {
+  text-decoration: none;
+  margin: 0px;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1rem;
+}
+.flexContainer {
+  gap: 0.5rem;
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+  border: black 2px solid;
+  border-radius: 8px;
+  padding: 6px;
+  height: fit-content;
+  align-items: center;
+}
+
+.flexContainer p {
+  text-align: center;
+}
+
+h2 {
+  word-wrap: break-word;
+}
+
+#blueSpan {
+  color: blue;
+}
+
+#inline-v-block {
+  border: 6px black solid;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.block {
+  background-color: #bbb;
+}
+
+.block a:hover {
+  color: white;
+}
+
+.inline {
+  background-color: #333;
+}
+
+#resizableForm {
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+}
+
+.resizableInputWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8px;
+}
+
+.resizableButtonWrapper {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8px;
+}
+
+@media (width <= 650px) {
+  .flexContainer {
+    background-color: var(--small-color);
+  }
+  #navBar {
+    background-color: #bbb;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #heroSection {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    margin-left: 8px;
+  }
+  h2 {
+    background-color: #000;
+    color: white;
+  }
+  #colorH2::after {
+    content: "aqua.";
+  }
+  #resizableForm {
+    flex-flow: column;
+    width: 400px;
+  }
+}
+
+@media (width > 650px) {
+  .flexContainer {
+    background-color: var(--big-color);
+    max-width: 400px;
+  }
+  #navBar {
+    background-color: #bbb;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.6rem;
+    padding-right: 6px;
+    justify-content: end;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  #heroSection {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #smallerDiv {
+    max-width: 200px;
+    height: 400px;
+  }
+  h2 {
+    background-color: #fff;
+    color: #000;
+  }
+  #colorH2::after {
+    content: "light blue.";
+  }
+}
