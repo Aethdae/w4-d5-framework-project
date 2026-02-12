@@ -83,10 +83,10 @@ h2 {
 #gridLayout {
   display: grid;
   grid-template:
-    "header header" minmax(50px, 500px)
-    "hero hero" minmax(50px, 500px)
-    ". ivb" minmax(50px, 500px)
-    ". div" minmax(50px, 500px);
+    "header header"
+    "hero hero"
+    ". ivb"
+    ". footer";
 }
 
 #gridLayout #blankDiv {
@@ -94,19 +94,20 @@ h2 {
 }
 #gridLayout #heroSection {
   grid-area: hero;
-  background-color: #222;
+  padding: 4px;
+  background-color: #f22;
   border: 2px black solid;
 }
 
 #gridLayout #inline-v-block {
   grid-area: ivb;
-  background-color: #bbb;
+  background-color: #bb0;
   border: 2px black ridge;
 }
 
 #gridLayout > header {
   grid-area: header;
-  background-color: #aaa;
+  background-color: #afa;
   border: 2px black solid;
 }
 
