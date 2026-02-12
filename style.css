@@ -83,14 +83,15 @@ h2 {
 #gridLayout {
   display: grid;
   grid-template:
-    "header header"
+    "header header" 200px
     "hero hero"
-    ". ivb"
+    "div ivb"
     ". footer";
 }
 
 #gridLayout #blankDiv {
   grid-area: div;
+  min-width: 400px;
 }
 #gridLayout #heroSection {
   grid-area: hero;
