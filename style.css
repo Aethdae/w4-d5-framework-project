@@ -85,8 +85,8 @@ h2 {
   grid-template:
     "header header"
     "hero hero"
-    "div ivb"
-    ". footer" 1fr / 1fr 1fr;
+    ". ivb"
+    "div footer" 1fr / 1fr 1fr;
 }
 
 #gridLayout #blankDiv {
